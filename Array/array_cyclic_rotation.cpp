@@ -10,7 +10,6 @@ void rotateArray(int arr[],int n,int shift){
     for(int i=n-finalShift;i<n;i++){
         temp[index++]=arr[i];
     }
-    index=0;
     for(int i=n-1;i>=finalShift;i--){
         arr[i]=arr[i-finalShift];
     }

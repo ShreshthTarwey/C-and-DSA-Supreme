@@ -1,21 +1,58 @@
-#include<iostream>
-using namespace std;
+// You are using GCC
+#include <stdio.h>
 
-/*
-Pattern for N = 4
-4444
-333
-22
-1
-*/
-
-int main(){
-  int i,j,n;
-    cin>>n;
-    for(i=1;i<=n;i++){
-        for(j=1;j<=n-i+1;j++){
-            cout<<n-i+1;
+void merge(float arr[], int left, int mid, int right) {
+    //Type your code here
+    int cap = right-left+1;
+    float temp[cap];
+    int l = left, r = mid+1, index = 0;
+    while(l<=mid && r<=right){
+        if(arr[l]<arr[r]){
+            temp[index++] = arr[l++];
         }
-        cout<<endl;
+        else{
+            temp[index++] = arr[r++];
+        }
     }
+    index=0;
+    while(l<=mid){
+        temp[index++] = arr[l++];
+    }
+    while(r<=right){
+        temp[index++] = arr[r++];
+    }
+    while(left<=right){
+        arr[left++] = temp[index++];
+    }
+}
+
+void mergeSort(float arr[], int left, int right) {
+    //Type your code here
+    if(left==right){
+        return;
+    }
+    int mid = left + (right-left)/2;
+    mergeSort(arr,left,mid);
+    mergeSort(arr,mid+1,right);
+    merge(arr,left,mid,right);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    float arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &arr[i]);
+    }
+
+    mergeSort(arr, 0, n - 1);
+
+    printf("Sorted Array:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%.2f ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
 }
