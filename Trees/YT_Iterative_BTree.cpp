@@ -11,6 +11,14 @@ class Tree{
         left=right=NULL;
     }
 };
+void in(Tree* root){
+    if(!root){
+        return;
+    }
+    in(root->left);
+    cout<<root->data<<" ";
+    in(root->right);
+}
 int main(){
     queue<Tree*> q;
     int x;
@@ -33,4 +41,5 @@ int main(){
             q.push(temp->right);
         }
     }
+    in(root);
 }
