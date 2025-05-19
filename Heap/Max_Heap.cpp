@@ -73,13 +73,13 @@ int main(){
     obj.insert(30);
     obj.insert(40);
     obj.insert(50);
-    obj.Delete();
-    obj.Delete();
-    obj.Delete();
-    obj.Delete();
-    obj.Delete();
-    obj.Delete();
-    obj.insert(50);
-    obj.Delete();
+    // obj.Delete();
+    // obj.Delete();
+    // obj.Delete();
+    // obj.Delete();
+    // obj.Delete();
+    // obj.Delete();
+    // obj.insert(50);
+    // obj.Delete();
     obj.print();
 }
