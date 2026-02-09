@@ -1,0 +1,1 @@
+{"name":"Local: StairCase","url":"c:\\Users\\Asus\\Desktop\\DSA_C++\\WinterPEP\\Dp\\StairCase.cpp","tests":[{"id":1770190350075,"input":"2 \n6 \n-1 2 1 3 -3 3 \n10 \n5 1 1 1 6 -1 1 1 1 1 ","output":"3 \n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\Desktop\\DSA_C++\\WinterPEP\\Dp\\StairCase.cpp","group":"local","local":true}
